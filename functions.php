@@ -184,3 +184,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// ACF FUNCTION 
+
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Theme General Settings'),
+            'menu_title'    => __('Theme Settings'),
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}
+
+/**
+ * Enqueue scripts and styles.
+ */
+function retirement_insight_scripts() {
+	wp_enqueue_style( 'montserrat-google-font', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap', array(), '1.0.0' );
+}
+add_action( 'wp_enqueue_scripts', 'retirement_insight_scripts' );
