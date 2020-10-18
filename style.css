@@ -47,6 +47,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 	- Accessibility
 	- Alignments
+# Custom Theme Styles
+	- Header Section
+
 
 --------------------------------------------------------------*/
 
@@ -650,6 +653,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	margin-top: 40px;
 }
 
 .main-navigation ul {
@@ -690,11 +694,20 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	margin-right: 20px
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	color: #25346B;
+	font-size: 22px;
+}
+
+.main-navigation ul li.current-menu-item a,
+.main-navigation ul li a:hover{
+	color: #EEAA00;
 }
 
 /* Small menu. */
@@ -878,19 +891,7 @@ textarea {
 # Plugins
 --------------------------------------------------------------*/
 
-/* Jetpack infinite scroll
---------------------------------------------- */
-
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
+/* None at the moment */
 
 /*--------------------------------------------------------------
 # Utilities
@@ -966,4 +967,25 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+# Custom Theme Styles
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Header Section
+--------------------------------------------------------------*/
+
+
+header#masthead {
+	display: flex;
+}
+
+.site-branding > a > img{
+	width: 30%;
+	margin: 0 30px;
 }
