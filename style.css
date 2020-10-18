@@ -653,6 +653,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	margin-top: 40px;
 }
 
 .main-navigation ul {
@@ -693,6 +694,7 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	margin-right: 20px
 }
 
 .main-navigation a {
@@ -700,9 +702,11 @@ textarea {
 	text-decoration: none;
 	font-family: 'Montserrat', sans-serif;
 	color: #25346B;
+	font-size: 22px;
 }
 
-.main-navigation ul li.current-menu-item a{
+.main-navigation ul li.current-menu-item a,
+.main-navigation ul li a:hover{
 	color: #EEAA00;
 }
 
