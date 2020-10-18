@@ -15,62 +15,54 @@
 get_header();
 ?>
 
+
+<!-- What do we need:
+
+    Note: Possibly Use https://bulma.io/ for grid?
+
+    1, Main Background
+    2, Main Heading and sub heading
+    3, CTA Box + headings
+    4, CTA Anchor
+    5, The wave effect css3
+    6, section__one Heading 
+    7, section__two sub text
+-->
+
+<div class="banner__image">
+    <div class="banner__wrap">
+        <div class="banner__boxLeft">
+            <h1><?php the_field('main_heading_banner'); ?></h1>
+            <h2><?php the_field('sub_heading_banner'); ?></h2>    
+        </div>
+
+
+        <div class="banner__boxRight">
+            <h3><?php the_field('top_box_text'); ?><br />
+            <span class="gold"><?php the_field('sub_text_box'); ?></span>
+    </h3>
+
+        </div>        
+    </div><!-- end banner__wrap -->
+</div><!-- end banner__image -->
+
+
+
+
 	<main id="primary" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() ); ?>
-
-
-
-                <?php the_field('main_heading_banner'); ?>
-                <?php the_field('sub_heading_banner'); ?>
-                <?php the_field('top_box_text'); ?>
-                <?php the_field('sub_text_box'); ?>
+                
+                
+                
+                
                 <?php the_field('button_text'); ?>
                 <?php the_field('section_one_heading'); ?>
                 <?php the_field('section_one_text'); ?>
                 <?php the_field('section_three_image'); ?>
                 <?php the_field('section_three_text'); ?>
                 <?php the_field('section_three_url'); ?>
-
-
-
-
-
-
-
-			<?php endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
 	</main><!-- #main -->
 
 <?php
 get_sidebar();
 get_footer();
+?>

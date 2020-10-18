@@ -643,6 +643,29 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+/* -- Home Page Only -- */
+
+.home main#primary{
+	display: flex;
+	width: 1024px;
+	width: 99vw;
+	background: #c3b2b2;
+	justify-content: space-around;
+}
+
+.home aside#secondary{
+	display: none;
+}
+
+
+.home footer#colophon {
+    margin-top: 100px;
+    background: #aaaacb;
+    padding: 100px 50px;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Components
