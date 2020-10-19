@@ -422,6 +422,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	font-family: 'Playfair Display', serif;
 }
 
 dfn,
@@ -429,10 +430,12 @@ cite,
 em,
 i {
 	font-style: italic;
+	font-family: 'Playfair Display', serif;
 }
 
 blockquote {
 	margin: 0 1.5em;
+	font-family: 'Playfair Display', serif;
 }
 
 address {
@@ -665,7 +668,70 @@ textarea {
 }
 
 
+/* -- Banner Section  -- */
 
+.banner__image{
+	background-image: url("images/retirement-investment-main-background.jpg");
+	height: 900px;
+	background-position: center; 
+    background-repeat: no-repeat; 
+	background-size: cover; 
+	padding: 50px 0;
+}
+
+.banner__wrap {
+    display: flex;
+	justify-content: center;
+}
+
+/* -- Banner__boxLeft -- */
+
+.banner__boxLeft {
+	width: 50%;
+	text-align: center;
+	padding: 0 40px;
+}
+
+.banner__boxLeft > h1 {
+    font-size: 70px;
+    color: #fff;
+}
+
+.banner__boxLeft > h2 {
+	font-size: 48px;
+	color: #25346B;
+}
+
+
+/* -- Banner__boxRight -- */
+
+.banner__boxRight {
+	width: 30%;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	
+	min-height: 52vh;
+	
+
+	/*-- Box Shadows --*/
+	-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+	box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+
+.banner__boxRight > h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+}
+
+.banner__boxRight > h3 span.gold {
+    color: #EEAA00;
+}
 
 /*--------------------------------------------------------------
 # Components
