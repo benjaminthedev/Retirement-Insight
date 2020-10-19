@@ -18,7 +18,7 @@ get_header();
 
 <!-- What do we need:
 
-    Note: Possibly Use https://bulma.io/ for grid?
+    
 
     1, Main Background
     2, Main Heading and sub heading
@@ -40,7 +40,7 @@ get_header();
         <div class="banner__boxRight">
             <h3><?php the_field('top_box_text'); ?><br />
             <span class="gold"><?php the_field('sub_text_box'); ?></span>
-    </h3>
+        </h3>
 
         </div>        
     </div><!-- end banner__wrap -->

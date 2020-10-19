@@ -209,5 +209,6 @@ function my_acf_op_init() {
  */
 function retirement_insight_scripts() {
 	wp_enqueue_style( 'montserrat-google-font', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap', array(), '1.0.0' );
+	wp_enqueue_style( 'playfair-google-font', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap', array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'retirement_insight_scripts' );
