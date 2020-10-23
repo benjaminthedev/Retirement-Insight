@@ -39,8 +39,12 @@ get_header();
 
         <div class="banner__boxRight">
             <h3><?php the_field('top_box_text'); ?><br />
-            <span class="gold"><?php the_field('sub_text_box'); ?></span>
-        </h3>
+              <span class="gold"><?php the_field('sub_text_box'); ?></span>
+            </h3>
+
+            <br />
+
+        <a href="<?php the_field('section_three_url'); ?>" class="gettingStarted__button"><span></span><span></span><span></span><span></span>Get Started > </a>
 
         </div>        
     </div><!-- end banner__wrap -->
@@ -49,11 +53,7 @@ get_header();
 
 
 
-	<main id="primary" class="site-main">
-                
-                
-                
-                
+	<main id="primary" class="site-main">  
                 <?php the_field('button_text'); ?>
                 <?php the_field('section_one_heading'); ?>
                 <?php the_field('section_one_text'); ?>
