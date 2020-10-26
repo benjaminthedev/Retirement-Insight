@@ -50,6 +50,15 @@ get_header();
     </div><!-- end banner__wrap -->
 </div><!-- end banner__image -->
 
+<div class="banner__wave">
+    <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+</div><!-- end banner__wave -->
+
 
 
 
