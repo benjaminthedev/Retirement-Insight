@@ -16,15 +16,15 @@ get_header();
 ?>
 
 
-<!-- What do we need:
+<!-- What do I need:
 
     
 
-    1, Main Background
-    2, Main Heading and sub heading
-    3, CTA Box + headings
-    4, CTA Anchor
-    5, The wave effect css3
+    1, Main Background - DONE
+    2, Main Heading and sub heading - DONE
+    3, CTA Box + headings - DONE
+    4, CTA Anchor - DONE
+    5, The wave effect css3 - DONE
     6, section__one Heading 
     7, section__two sub text
 -->
@@ -62,16 +62,36 @@ get_header();
 
 
 
-	<main id="primary" class="site-main">  
-                <?php the_field('button_text'); ?>
-                <?php the_field('section_one_heading'); ?>
-                <?php the_field('section_one_text'); ?>
-                <?php the_field('section_three_image'); ?>
-                <?php the_field('section_three_text'); ?>
-                <?php the_field('section_three_url'); ?>
-	</main><!-- #main -->
+<section class="one">
+    <h2><?php the_field('section_one_heading'); ?></h2>
+    <p><?php the_field('section_one_text'); ?></p>
+</section>
+
+
+<section class="two background__section">
+         
+                
+                
+               <img src="<?php the_field('section_two_image'); ?>" alt="Retirement Investment Start Now"> 
+                
+                
+               <div class="section__right">
+                    <?php the_field('section_two_text'); ?>              
+                    
+                    <a href="<?php the_field('section_two_url'); ?>" alt="Start Now" class="section__button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <?php the_field('button_text'); ?> >
+                    </a>
+                </div>
+
+</section>
+
+
+
 
 <?php
-get_sidebar();
 get_footer();
 ?>

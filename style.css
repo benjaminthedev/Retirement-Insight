@@ -740,9 +740,10 @@ textarea {
 	font-weight: 800;
 }
 
-a.gettingStarted__button {
+a.gettingStarted__button, 
+a.section__button  {
 	background: #25346B;
-	
+	text-align: center;
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     width: 50%;
@@ -756,9 +757,12 @@ a.gettingStarted__button {
 	transition: 0.5s;
 }
 
-a.gettingStarted__button:hover{
+a.gettingStarted__button:hover,
+a.section__button:hover {
 	color: rgba(255, 255, 255, 1);
 }
+
+
 
 
 /* -- Effect for button  -- */
@@ -841,7 +845,9 @@ a.gettingStarted__button:hover span:nth-child(4){
 	transition-delay: 0.5s;
 }
 
-/* -- Waves --  */
+/*--------------------------------------------------------------
+# Waves Section Banner Home Page
+--------------------------------------------------------------*/
 
 .banner__wave{
 	margin: 0;
@@ -852,8 +858,8 @@ a.gettingStarted__button:hover span:nth-child(4){
 	position: relative;
 	width: 100%;
 	/* height: 100vh; */
-	background: #3586ff;
-	overflow: hidden;
+	/* background: #3586ff; */
+	overflow: display;
 }
 
 .banner__wave section .wave{
@@ -914,6 +920,144 @@ a.gettingStarted__button:hover span:nth-child(4){
 
 
 
+/*--------------------------------------------------------------
+background__section - Home
+--------------------------------------------------------------*/
+.background__section{
+	background: #3A4779;
+	color: #fff;
+	padding: 100px 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.background__section img {
+    width: 30%;
+    border: solid 10px #fff;
+}
+
+a.section__button{
+	margin: 50px 0 0 0;
+}
+
+/* -- Effect for button  -- */
+a.section__button span{
+	display: block;
+	position: absolute;
+	background: #fff;
+}
+
+a.section__button span:nth-child(1){
+	left: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+}
+
+a.section__button:hover span:nth-child(1){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #fff;
+}
+
+a.section__button span:nth-child(2){
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+}
+
+a.section__button:hover span:nth-child(2){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #fff;
+}
+
+a.section__button span:nth-child(3){
+	right: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+a.section__button:hover span:nth-child(3){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #fff;
+	transition-delay: 0.5s;
+}
+
+a.section__button span:nth-child(4){
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+
+a.section__button:hover span:nth-child(4){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #fff;
+	transition-delay: 0.5s;
+}
+
+
+/*--------------------------------------------------------------
+Section One - Home
+--------------------------------------------------------------*/
+section.one{
+	padding:  100px 0px;
+}
+
+section.one h2 {
+    text-align: center;
+	font-size: 52px;
+	color:#EEAA00;
+}
+
+section.one p{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+	font-size: 25px;
+	
+}
+/*--------------------------------------------------------------
+Section Two - Home
+--------------------------------------------------------------*/
+
+.section__right{
+	display: flex;
+	flex-direction: column;	
+	width: 44vw;
+}
+
+.section__right > p {
+    font-size: 24px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/* .section__right > a.section__button{
+	background: green;
+} */
 
 
 
