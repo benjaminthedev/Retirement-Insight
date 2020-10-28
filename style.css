@@ -757,6 +757,10 @@ a.section__button  {
 	transition: 0.5s;
 }
 
+a.section__button{
+	background-color: #EEAA00;
+} 
+
 a.gettingStarted__button:hover,
 a.section__button:hover {
 	color: rgba(255, 255, 255, 1);
@@ -1009,7 +1013,6 @@ a.section__button span:nth-child(4){
 	transition: transform 0.5s;
 	transition-delay: 0.5s;
 }
-
 a.section__button:hover span:nth-child(4){
 	transform: scaleX(1);
 	transform-origin: left;
@@ -1055,10 +1058,10 @@ Section Two - Home
     margin-bottom: 0px;
 }
 
-/* .section__right > a.section__button{
-	background: green;
-} */
 
+/*--------------------------------------------------------------
+Section Three - Home
+--------------------------------------------------------------*/
 
 
 
