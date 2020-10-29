@@ -1492,9 +1492,57 @@ section.newsletter {
 	padding: 100px 0;
 }
 
+.newsletter_content h3 {
+	font-size: 40px;
+	color:#EEAA00;
+}
+.newsletter_content p {
+	font-size: 22px;
+	color:#fff;
+}
+.newsletter__wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    width: 28vw;
+    padding: 20px;
+    margin-top: 20px;
+}
+.newsletter__wrapper input {
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #edaa00 !important;
+}
 
 
+/* -- Footer -- */
 
+footer.site-footer {
+	display: flex;
+	color:#fff;
+	background: #25346B;
+	padding: 50px 0;
+}
+
+.footer__logo {
+    width: 20vw;
+}
+
+.contact__links {
+	width: 30vw;
+}
+
+.footer__quickLinks{
+	width: 15vw;
+}
+
+.footer__aboutUs {
+	width: 35vw;
+}
 
 
 /* temp layout styles for interior pages */
