@@ -14,21 +14,6 @@
 
 get_header();
 ?>
-
-
-<!-- What do I need:
-
-    
-
-    1, Main Background - DONE
-    2, Main Heading and sub heading - DONE
-    3, CTA Box + headings - DONE
-    4, CTA Anchor - DONE
-    5, The wave effect css3 - DONE
-    6, section__one Heading 
-    7, section__two sub text
--->
-
 <div class="banner__image">
     <div class="banner__wrap">
         <div class="banner__boxLeft">
@@ -90,20 +75,19 @@ get_header();
 
 
 <section class="three">
-    <h1>This is section 3</h1>
-    
+
+    <h3><?php the_field('section_three_heading'); ?></h3>
+    <h4><?php the_field('section_three_sub_heading'); ?></h4> 
     
     <?php if( have_rows('icon_area') ): ?>
     <ul class="icon__area">
     <?php while( have_rows('icon_area') ): the_row(); 
         $image = get_sub_field('icon_image');
-        $heading = get_sub_field('icon_heading')
+        $heading = get_sub_field('icon_heading');
         ?>
         <li>
-           <img src="<?php echo wp_get_attachment_image( $image, 'full' ); ?>" />
+            <img src="<?php the_sub_field('icon_image'); ?>" />
             <p><?php the_sub_field('icon_heading'); ?></p>
-            <p><?php the_sub_field($image); ?></p>
-            <p><?php the_sub_field($heading); ?></p>
         </li>
     <?php endwhile; ?>
     </ul>
