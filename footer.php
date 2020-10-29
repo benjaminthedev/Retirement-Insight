@@ -25,19 +25,49 @@
 
 
 
-	<footer id="colophon" class="site-footer">
+	<footer  class="site-footer">
 
 
 
 
-	<div class="footer__logo"></div>
+	<div class="footer__logo">
+		<img src="<?php the_field('footer_logo', 'option'); ?>" alt="Footer Logo" />
+	</div>
 
-	<div class="footer__contact"></div>
+	<div class="contact__links">
+	<div class="footer__contact">
+		<h4>Contact Us</h4>
+		<?php the_field('contact_section', 'option'); ?>
+	</div>
 
-	<div class="footer__quickLinks"></div>
+	<div class="footer__quickLinks">
+		  <?php if( have_rows('social_media', 'option') ): ?>
+			<ul class="icon__area">
+			<?php while( have_rows('social_media', 'option') ): the_row();?>
+				<li>
+					<a href="<?php the_sub_field('url'); ?>" alt="social media links" target="_blank">
+						<?php the_sub_field('fontawesome'); ?>
+		  			</a>					
+				</li>
+			<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>	
+	</div>
+	</div>	
 
-	<div class="footer__aboutUs"></div>
+			<div class="footer__quickLinks">
+				<h4>quick links</h4>
 
+				  
+			</div>
+
+	<div class="footer__aboutUs">
+		<?php the_field('about_us', 'option'); ?>
+	</div>
+
+
+	 
+</footer><!-- footer -->
 
 
 
@@ -54,7 +84,6 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'retirementinsight' ), 'retirementinsight', '<a href="https://benjaminthedev.github.io/">BenjaminTheDev</a>' );
 				?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
