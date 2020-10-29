@@ -1,5 +1,5 @@
-<?php
-/**
+<?php 
+  /**
  * The template for displaying the footer
  *
  * Contains the closing of the #content div and all content after.
@@ -11,7 +11,36 @@
 
 ?>
 
+<section class="newsletter">
+	<div class="newsletter_content">
+		<h3><?php the_field('newsletter_heading', 'option'); ?></h3>
+		<p><?php the_field('newsletter_text', 'option'); ?></p>
+	</div>
+
+	<div class="newsletter_signUpBox">
+		<?php the_field('newsletter_shortcode_box', 'option'); ?>
+	</div>
+</section>
+
+
+
+
 	<footer id="colophon" class="site-footer">
+
+
+
+
+	<div class="footer__logo"></div>
+
+	<div class="footer__contact"></div>
+
+	<div class="footer__quickLinks"></div>
+
+	<div class="footer__aboutUs"></div>
+
+
+
+
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'retirementinsight' ) ); ?>">
 				<?php
