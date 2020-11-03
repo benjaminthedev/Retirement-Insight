@@ -29,13 +29,11 @@ get_header();
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
+		endwhile; // End of the loop.w
 		?>
 
 	</main><!-- #main -->
 
-<?php
-get_sidebar();?>
+<?php get_sidebar();?>
 </div><!-- end main__wrapper -->
-
 <?php get_footer(); ?>
