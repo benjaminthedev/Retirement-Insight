@@ -56,12 +56,25 @@
 	</div>	
 
 			<div class="footer__quickLinks">
-				<h4>quick links</h4>
+				<h4>Quick Links</h4>
+
+				<ul class="quick__links">
+					<li><a href="/about-us/">About Us</a></li>
+					<li><a href="/how-we-can-help/">How We Can Help</a></li>
+					<li><a href="/how-to-get-started/">How To Get Started</a></li>
+					<li><a href="/plans/">Plans</a></li>
+					<li><a href="/example-reports/">Example Reports</a></li>
+					<li><a href="/faqs/">FAQs</a></li>
+					<li><a href="/contact-us/">Contact Us</a></li>
+
+
+				</ul>
 
 				  
 			</div>
 
 	<div class="footer__aboutUs">
+		<h4>About Us</h4>
 		<?php the_field('about_us', 'option'); ?>
 	</div>
 
