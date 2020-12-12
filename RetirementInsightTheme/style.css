@@ -47,6 +47,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 	- Accessibility
 	- Alignments
+# Custom Theme Styles
+	- Header Section
+
 
 --------------------------------------------------------------*/
 
@@ -419,6 +422,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	font-family: 'Playfair Display', serif;
 }
 
 dfn,
@@ -426,10 +430,12 @@ cite,
 em,
 i {
 	font-style: italic;
+	font-family: 'Playfair Display', serif;
 }
 
 blockquote {
 	margin: 0 1.5em;
+	font-family: 'Playfair Display', serif;
 }
 
 address {
@@ -533,12 +539,12 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #fff;
 }
 
-a:visited {
+/* a:visited {
 	color: #800080;
-}
+} */
 
 a:hover,
 a:focus,
@@ -561,13 +567,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+    background-color: #EEAA00;
+    padding: 20px 0px;
+    margin-top: 80px;
+    display: block;
+    width: 30%;
+	text-align: center;
+	border: none;
+    text-decoration: none;  
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+}
+
+.coupon button.button{
+	margin-top: 10px;
 }
 
 button:hover,
@@ -640,6 +654,506 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+/* -- Home Page Only -- */
+
+.home main#primary{
+	display: flex;
+	width: 1024px;
+	width: 99vw;
+	background: #c3b2b2;
+	justify-content: space-around;
+}
+
+.home aside#secondary{
+	display: none;
+}
+
+
+.home footer#colophon {
+    margin-top: 100px;
+    background: #aaaacb;
+    padding: 100px 50px;
+}
+
+
+/* -- Banner Section  -- */
+
+.banner__image{
+	background-image: url("images/retirement-investment-main-background.jpg");
+	height: 900px;
+	background-position: center; 
+    background-repeat: no-repeat; 
+	background-size: cover; 
+	padding: 50px 0;
+}
+
+.banner__wrap {
+    display: flex;
+	justify-content: center;
+}
+
+/* -- Widget Link -- */
+
+a.start__btn {
+    padding: 20px 15px;
+    background: #EEAA00;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+a.start__btn:hover{
+	color:#fff;
+	background: #EEAA00;
+}
+
+/* -- Banner__boxLeft -- */
+
+.banner__boxLeft {
+	width: 50%;
+	text-align: center;
+	padding: 0 40px;
+}
+
+.banner__boxLeft > h1 {
+    font-size: 80px;
+	color: #fff;
+	margin-bottom: 0px;
+}
+
+.banner__boxLeft > h2 {
+	font-size: 44px;
+	color: #25346B;
+	margin: 0px;
+	line-height: 48px;
+}
+
+
+/* -- Banner__boxRight -- */
+
+.banner__boxRight {
+	width: 30%;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	margin-top: 50px;
+	min-height: 32vh;
+	
+
+	/*-- Box Shadows --*/
+	-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+	box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+.banner__boxRight > h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 400;
+	color: #707070;
+	padding-top: 20px;
+}
+
+.banner__boxRight > h3 span.gold {
+	color: #EEAA00;
+	font-weight: 800;
+}
+
+a.gettingStarted__button, 
+a.section__button  {
+	background: #25346B;
+	text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    width: 50%;
+    /* border-radius: 10px; */
+    padding: 10px;
+    text-transform: uppercase;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+	transition: 0.5s;
+}
+
+a.section__button{
+	background-color: #EEAA00;
+} 
+
+a.gettingStarted__button:hover,
+a.section__button:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+/* -- Effect for button  -- */
+a.gettingStarted__button span{
+	display: block;
+	position: absolute;
+	background: #EEAA00;
+}
+
+a.gettingStarted__button span:nth-child(1){
+	left: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+}
+
+a.gettingStarted__button:hover span:nth-child(1){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #EEAA00;
+}
+
+a.gettingStarted__button span:nth-child(2){
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+}
+
+a.gettingStarted__button:hover span:nth-child(2){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #EEAA00;
+}
+
+a.gettingStarted__button span:nth-child(3){
+	right: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+
+a.gettingStarted__button:hover span:nth-child(3){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #EEAA00;
+	transition-delay: 0.5s;
+}
+
+
+a.gettingStarted__button span:nth-child(4){
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+
+a.gettingStarted__button:hover span:nth-child(4){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #EEAA00;
+	transition-delay: 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Waves Section Banner Home Page
+--------------------------------------------------------------*/
+
+.banner__wave{
+	margin: 0;
+	padding: 0;	
+}
+
+.banner__wave section{
+	position: relative;
+	width: 100%;
+	/* height: 100vh; */
+	/* background: #3586ff; */
+	overflow: display;
+}
+
+.banner__wave section .wave{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-image: url("images/wave.png");
+	background-size: 1000px 100px;
+}
+
+.banner__wave section .wave.wave1{
+	 animation: animate 30s linear infinite;
+	 z-index: 1000;
+	 opacity: 1;
+	 animation-delay: 0s;
+	 bottom: 0;
+}
+@keyframes animate{
+	0%{
+		 background-position: 0;
+	}
+	100%{
+		 background-position: 1000px;
+	}
+}
+
+.banner__wave section .wave.wave2{
+	 animation: animate2 15s linear infinite;
+	 z-index: 999;
+	 opacity: 0.5;
+	 animation-delay: -5s;
+	 bottom: 10px;
+}
+.banner__wave section .wave.wave3{
+	 animation: animate 30s linear infinite;
+	 z-index: 998;
+	 opacity: 0.2;
+	 animation-delay: -2s;
+	 bottom: 15px;
+}
+.banner__wave section .wave.wave4{
+	 animation: animate2 5s linear infinite;
+	 z-index: 997;
+	 opacity: 0.7;
+	 animation-delay: -5s;
+	 bottom: 20px;
+}
+@keyframes animate2{
+	0%{
+		 background-position: 0;
+	}
+	100%{
+		 background-position: -1000px;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+background__section - Home
+--------------------------------------------------------------*/
+.background__section{
+	background: #25346B;
+	color: #fff;
+	padding: 100px 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.background__section img {
+    /* width: 30%; */
+	border: solid 10px #fff;
+	max-height: 300px;
+}
+
+a.section__button{
+	margin: 50px 0 0 0;
+}
+
+/* -- Effect for button  -- */
+a.section__button span{
+	display: block;
+	position: absolute;
+	background: #fff;
+}
+
+a.section__button span:nth-child(1){
+	left: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+}
+
+a.section__button:hover span:nth-child(1){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #fff;
+}
+
+a.section__button span:nth-child(2){
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+}
+
+a.section__button:hover span:nth-child(2){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #fff;
+}
+
+a.section__button span:nth-child(3){
+	right: 0;
+	bottom: 0;
+	width: 4px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+a.section__button:hover span:nth-child(3){
+	transform: scaleY(1);
+	transform-origin: bottom;
+	transition: transform 0.5s;
+	background: #fff;
+	transition-delay: 0.5s;
+}
+
+a.section__button span:nth-child(4){
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 4px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+	transition-delay: 0.5s;
+}
+a.section__button:hover span:nth-child(4){
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.5s;
+	background: #fff;
+	transition-delay: 0.5s;
+}
+
+
+/*--------------------------------------------------------------
+Section One - Home
+--------------------------------------------------------------*/
+section.one{
+	padding:  100px 0px;
+}
+
+section.one h2 {
+    text-align: center;
+	font-size: 52px;
+	color:#EEAA00;
+}
+
+section.one p{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+	font-size: 25px;
+	
+}
+/*--------------------------------------------------------------
+Section Two - Home
+--------------------------------------------------------------*/
+
+.section__right{
+	display: flex;
+	flex-direction: column;	
+	width: 44vw;
+}
+
+.section__right > p {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+
+/*--------------------------------------------------------------
+Section Three - Home
+--------------------------------------------------------------*/
+
+section.three {
+    padding: 100px 0px;
+    text-align:center;
+}
+
+section.three > h3{
+	color:#EEAA00;
+	font-size: 42px;
+	margin: 0px;
+	padding: 0px;
+}
+
+section.three > h4{
+	color:#25346B;
+	font-size: 32px;
+	margin: 0px 0 80px 0;
+	padding: 0px;
+}
+
+section.three p{
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+	color:#000;
+    text-align: center;
+	font-size: 28px;
+}
+
+section.three > ul.icon__area {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.three > ul.icon__area li{
+	list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+ul.icon__area li img {
+    width: 28%;
+	margin: 0 auto;
+}
+
+ul.icon__area li:nth-child(2) img {
+	width: 48%;
+}
+
+ul.icon__area li:nth-child(3) img {
+	width: 20%;
+}
+
+
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #3A4779;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #EEAA00;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 4px solid #EEAA00;  /* creates padding around scroll thumb */
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Components
@@ -647,9 +1161,15 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
+.menu-top-header-menu-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .main-navigation {
 	display: block;
 	width: 100%;
+	margin-top: 40px;	
 }
 
 .main-navigation ul {
@@ -690,11 +1210,21 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	margin-right: 20px
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	color: #25346B;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.main-navigation ul li.current-menu-item a,
+.main-navigation ul li a:hover{
+	color: #EEAA00;
 }
 
 /* Small menu. */
@@ -747,10 +1277,10 @@ textarea {
 	display: block;
 }
 
-.post,
+/* .post,
 .page {
 	margin: 0 0 1.5em;
-}
+} */
 
 .updated:not(.published) {
 	display: none;
@@ -878,19 +1408,7 @@ textarea {
 # Plugins
 --------------------------------------------------------------*/
 
-/* Jetpack infinite scroll
---------------------------------------------- */
-
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
+/* None at the moment */
 
 /*--------------------------------------------------------------
 # Utilities
@@ -967,3 +1485,627 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+
+/*--------------------------------------------------------------
+# Custom Theme Styles
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Header Section
+--------------------------------------------------------------*/
+
+
+header#masthead {
+	display: flex;
+	border-bottom: 1px solid #25356a;
+}
+
+.site-branding > a > img{
+	width: 30%;
+	margin: 0 30px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Widget Section
+--------------------------------------------------------------*/
+
+.widget ul#menu-top-header-menu {
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+}
+
+.widget ul#menu-top-header-menu li{
+    list-style-type: none;
+}
+
+.widget ul#menu-top-header-menu li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# WooCommerce Section
+--------------------------------------------------------------*/
+nav.woocommerce-breadcrumb,
+.product_meta,
+ul.tabs.wc-tabs {
+    display: none;
+}
+.woo__wrapper {
+    display: flex;
+}
+
+button.single_add_to_cart_button.button.alt {
+    margin-top: 10px;
+}
+
+
+
+
+/* -- Footer -- */
+
+footer.site-footer {
+	display: flex;
+	color:#fff;
+	background: #25346B;
+	padding: 50px 0;
+}
+
+.footer__logo {
+	width: 20vw;
+	margin-top: -60px;
+}
+
+footer.site-footer h4 {
+    font-size: 25px;
+}
+
+.contact__links {
+	width: 30vw;
+}
+
+.footer__quickLinks{
+	width: 15vw;
+}
+
+.footer__aboutUs {
+	width: 35vw;
+}
+
+.footer__contact p {
+    margin: 0px;
+}
+
+.site-info {
+    display: none;
+}
+
+
+/* -- Footer Social Media Links -- */
+
+.footer__quickLinks ul{
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+.footer__quickLinks ul li{
+	list-style-type: none;
+	/* background: #fff;*/
+}
+
+.footer__quickLinks ul li a{
+	padding: 10px;
+    font-size: 34px;
+}
+
+.footer__quickLinks ul li a i {
+    color: #EEAA00;    
+}
+}
+.footer__quickLinks ul li a i:hover {
+    color: #3A4779;
+}
+
+
+
+
+.footer__quickLinks ul.quick__links{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__quickLinks ul.quick__links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer__quickLinks ul.quick__links li a:hover{
+    color:#EEAA00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* temp layout styles for interior pages */
+
+.main_wrapper {
+    display: flex;
+}
+
+main#primary{
+    width: 70vw;
+    padding: 100px;
+}
+
+aside#secondary {
+    width: 30vw;
+    background: #25356a;
+    padding: 100px;
+    color: #fff;
+}
+
+aside a {
+	color: #fff;
+}
+aside a:hover {
+	color: #EEAA00;
+}
+
+
+
+/*--------------------------------------------------------------
+# Newsletter Section
+--------------------------------------------------------------*/
+
+section.newsletter {
+	background: #3A4779;
+    display: flex;
+	justify-content: space-around;
+	padding: 100px 0;
+}
+
+.newsletter_content h3 {
+	font-size: 40px;
+	color:#EEAA00;
+}
+.newsletter_content p {
+	font-size: 22px;
+	color:#fff;
+}
+.newsletter__wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    width: 28vw;
+    padding: 20px;
+    margin-top: 20px;
+}
+.newsletter__wrapper input {
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+	color: #edaa00 !important;
+}
+
+input.newsletter__submit {
+	background: #EEAA00;
+	color: #fff !important;	
+	width: 100%;
+    margin-top: 0px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Responsive Styles
+--------------------------------------------------------------*/
+
+
+@media (max-width: 575.98px) { 
+	.site-branding > a > img {
+		width: 45%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	nav#site-navigation {
+    	display: none;
+	}
+
+	.banner__wrap {
+   		display: flex;
+    	justify-content: center;
+    	flex-direction: column;
+	}
+	.banner__boxLeft {
+		width: 100%;
+		text-align: center;
+		padding: 0 40px;
+	}
+	.banner__boxLeft > h1{
+		display: none;
+	}
+	.banner__boxLeft > h2 {
+		font-size: 30px;
+		color: #25346B;
+		margin: 0px;
+		line-height: 49px;
+	}
+
+	.banner__boxRight {
+		width: 92%;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 10px;
+		margin-top: 50px;
+		min-height: 42vh;
+		-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-left: 16px;
+	}
+
+	.background__section {
+		flex-direction: column;
+		padding: 50px;
+	}
+
+	.section__right{
+		width: 80vw;
+	}
+
+	section.three > ul{
+		margin:0px;
+	}
+	section.three > ul.icon__area{
+		flex-direction: column;
+	}
+	section.newsletter{
+		flex-direction: column;
+	}
+	.newsletter_content {
+    	padding: 20px;
+	}
+	.newsletter__wrapper{
+		width: 97vw;
+	}
+
+	/* -- Interior Page -- */
+	.main_wrapper {
+    	flex-direction: column;
+	}
+	main#primary {
+		width: 100vw;
+	}
+	aside#secondary {
+		width: 100vw;
+	}
+
+	footer.site-footer{
+		flex-direction: column;
+	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}
+ }
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.site-branding > a > img {
+		width: 45%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	nav#site-navigation {
+    	display: none;
+	}
+
+	.banner__wrap {
+   		display: flex;
+    	justify-content: center;
+    	flex-direction: column;
+	}
+	.banner__boxLeft {
+		width: 100%;
+		text-align: center;
+		padding: 0 40px;
+	}
+	.banner__boxLeft > h1{
+		display: none;
+	}
+	.banner__boxLeft > h2 {
+		font-size: 30px;
+		color: #25346B;
+		margin: 0px;
+		line-height: 49px;
+	}
+
+	.banner__boxRight {
+		width: 92%;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 10px;
+		margin-top: 50px;
+		min-height: 42vh;
+		-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-left: 16px;
+	}
+
+	.background__section {
+		flex-direction: column;
+		padding: 50px;
+	}
+	.background__section img{
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.section__right{
+		width: 80vw;
+	}
+
+	section.three > ul{
+		margin:0px;
+	}
+	section.three > ul.icon__area{
+		flex-direction: column;
+	}
+	section.newsletter{
+		flex-direction: column;
+	}
+	.newsletter_content {
+    	padding: 20px;
+	}
+	.newsletter__wrapper{
+		width: 97vw;
+	}
+	
+	/* -- Interior Page -- */
+	.main_wrapper {
+    	flex-direction: column;
+	}
+	main#primary {
+		width: 100vw;
+	}
+	aside#secondary {
+		width: 100vw;
+	}
+	footer.site-footer{
+		flex-direction: column;
+	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}	
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.site-branding > a > img {
+		width: 45%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	nav#site-navigation {
+    	display: none;
+	}
+
+	.banner__wrap {
+   		display: flex;
+    	justify-content: center;
+    	flex-direction: column;
+	}
+	.banner__boxLeft {
+		width: 100%;
+		text-align: center;
+		padding: 0 40px;
+	}
+	.banner__boxLeft > h1{
+		display: none;
+	}
+	.banner__boxLeft > h2 {
+		font-size: 30px;
+		color: #25346B;
+		margin: 0px;
+		line-height: 49px;
+	}
+
+	.banner__boxRight {
+		width: 92%;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 10px;
+		margin-top: 50px;
+		min-height: 42vh;
+		-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-left: 16px;
+	}
+
+	.background__section {
+		flex-direction: column;
+		padding: 50px;
+	}
+	.background__section img{
+		width: 50%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.section__right{
+		width: 80vw;
+	}
+
+	section.three > ul{
+		margin:0px;
+	}
+	section.three > ul.icon__area{
+		flex-direction: column;
+	}
+	section.newsletter{
+		flex-direction: column;
+	}
+	.newsletter_content {
+    	padding: 20px;
+	}
+	.newsletter__wrapper{
+		width: 97vw;
+	}
+	
+	/* -- Interior Page -- */
+	.main_wrapper {
+    	flex-direction: column;
+	}
+	main#primary {
+		width: 100vw;
+	}
+	aside#secondary {
+		width: 100vw;
+	}	
+	footer.site-footer{
+		flex-direction: column;
+	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}	
+ }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	.site-branding > a > img {
+		width: 45%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	nav#site-navigation {
+    	display: none;
+	}
+
+	.banner__wrap {
+   		display: flex;
+    	justify-content: center;
+    	flex-direction: column;
+	}
+	.banner__boxLeft {
+		width: 100%;
+		text-align: center;
+		padding: 0 40px;
+	}
+	.banner__boxLeft > h1{
+		display: none;
+	}
+	.banner__boxLeft > h2 {
+		font-size: 30px;
+		color: #25346B;
+		margin: 0px;
+		line-height: 49px;
+	}
+
+	.banner__boxRight {
+		width: 92%;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 10px;
+		margin-top: 50px;
+		min-height: 42vh;
+		-webkit-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.45);
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin-left: 16px;
+	}
+
+	.background__section {
+		flex-direction: column;
+		padding: 50px;
+	}
+	.background__section img{
+		width: 40%;
+		margin: 0 auto;
+		display: block;
+	}
+	.section__right{
+		width: 80vw;
+	}
+
+	section.three > ul{
+		margin:0px;
+	}
+	section.three > ul.icon__area{
+		flex-direction: column;
+	}
+	section.newsletter{
+		flex-direction: column;
+	}
+	.newsletter_content {
+    	padding: 20px;
+	}
+	.newsletter__wrapper{
+		width: 97vw;
+	} 
+}
+
+
+@media (min-width: 1200px) { }
+
+
+
+
+
+
+
+
+
+
+
