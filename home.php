@@ -29,7 +29,7 @@ get_header();
 
             <br />
 
-        <a href="<?php the_field('section_three_url'); ?>" class="gettingStarted__button"><span></span><span></span><span></span><span></span>Get Started > </a>
+        <a href="https://retirementinsight.co.uk/product/paid-plan/" class="gettingStarted__button"><span></span><span></span><span></span><span></span>Get Started > </a>
 
         </div>        
     </div><!-- end banner__wrap -->

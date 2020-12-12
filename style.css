@@ -567,13 +567,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+    background-color: #EEAA00;
+    padding: 20px 0px;
+    margin-top: 80px;
+    display: block;
+    width: 30%;
+	text-align: center;
+	border: none;
+    text-decoration: none;  
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+}
+
+.coupon button.button{
+	margin-top: 10px;
 }
 
 button:hover,
@@ -682,6 +690,20 @@ textarea {
 .banner__wrap {
     display: flex;
 	justify-content: center;
+}
+
+/* -- Widget Link -- */
+
+a.start__btn {
+    padding: 20px 15px;
+    background: #EEAA00;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+a.start__btn:hover{
+	color:#fff;
+	background: #EEAA00;
 }
 
 /* -- Banner__boxLeft -- */
@@ -1147,7 +1169,7 @@ body::-webkit-scrollbar-thumb {
 .main-navigation {
 	display: block;
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 40px;	
 }
 
 .main-navigation ul {
@@ -1478,6 +1500,7 @@ body::-webkit-scrollbar-thumb {
 
 header#masthead {
 	display: flex;
+	border-bottom: 1px solid #25356a;
 }
 
 .site-branding > a > img{
@@ -1486,33 +1509,48 @@ header#masthead {
 }
 
 
+
 /*--------------------------------------------------------------
-# Newsletter Section
+# Widget Section
 --------------------------------------------------------------*/
 
-section.newsletter {
-	background: #3A4779;
-    display: flex;
-	justify-content: space-around;
-	padding: 100px 0;
+.widget ul#menu-top-header-menu {
+    margin: 0;
+    padding: 0;
+    width: 20vw;
 }
 
-.newsletter_content h3 {
-	font-size: 40px;
-	color:#EEAA00;
+.widget ul#menu-top-header-menu li{
+    list-style-type: none;
 }
-.newsletter_content p {
-	font-size: 22px;
-	color:#fff;
+
+.widget ul#menu-top-header-menu li a{
+    text-decoration: none;
+    font-size: 20px;
 }
-.newsletter__wrapper {
+
+
+/*--------------------------------------------------------------
+# WooCommerce Section
+--------------------------------------------------------------*/
+nav.woocommerce-breadcrumb,
+.product_meta,
+ul.tabs.wc-tabs {
+    display: none;
+}
+.woo__wrapper {
     display: flex;
-    flex-direction: column;
-    
-    width: 28vw;
-    padding: 20px;
-    margin-top: 20px;
 }
+
+
+button.single_add_to_cart_button.button.alt {
+    margin-top: 10px;
+}
+
+
+
+
+=======
 .newsletter__wrapper input {
     margin-bottom: 10px;
     padding: 20px;
@@ -1527,6 +1565,7 @@ input.newsletter__submit {
 	background: #EEAA00;
 	color: #edaa00 !important;
 }
+
 /* -- Footer -- */
 
 footer.site-footer {
@@ -1629,6 +1668,7 @@ footer.site-footer h4 {
 
 main#primary{
     width: 70vw;
+
     background: #999;    
     color: #fff;
     padding: 100px;
@@ -1650,7 +1690,49 @@ aside a:hover {
 
 
 
+/*--------------------------------------------------------------
+# Newsletter Section
+--------------------------------------------------------------*/
 
+section.newsletter {
+	background: #3A4779;
+    display: flex;
+	justify-content: space-around;
+	padding: 100px 0;
+}
+
+.newsletter_content h3 {
+	font-size: 40px;
+	color:#EEAA00;
+}
+.newsletter_content p {
+	font-size: 22px;
+	color:#fff;
+}
+.newsletter__wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    width: 28vw;
+    padding: 20px;
+    margin-top: 20px;
+}
+.newsletter__wrapper input {
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+	color: #edaa00 !important;
+}
+
+input.newsletter__submit {
+	background: #EEAA00;
+	color: #fff !important;	
+	width: 100%;
+    margin-top: 0px;
+}
 
 
 

@@ -447,13 +447,16 @@ p.stars.selected a:not(.active)::before {
 /**
  * Notices
  */
-.woocommerce-message,
-.woocommerce-info,
-.woocommerce-error,
-.woocommerce-noreviews,
+.woocommerce-message, 
+.woocommerce-info, 
+.woocommerce-error, 
+.woocommerce-noreviews, 
 p.no-comments {
-	background-color: #0f834d;
-	clear: both;
+    background-color: #25356a;
+    clear: both;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #fff;
 }
 
 .woocommerce-info,
@@ -475,6 +478,17 @@ p.no-comments {
 	padding: 1em;
 	background-color: #3d9cd2;
 	z-index: 9999;
+}
+
+a.checkout-button.button.alt.wc-forward {
+    background-color: #EEAA00;
+    padding: 20px 0px;
+    margin-top: 80px;
+    display: block;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;  
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 48em) {
