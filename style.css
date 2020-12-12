@@ -539,12 +539,12 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #fff;
 }
 
-a:visited {
+/* a:visited {
 	color: #800080;
-}
+} */
 
 a:hover,
 a:focus,
@@ -567,13 +567,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+    background-color: #EEAA00;
+    padding: 20px 0px;
+    margin-top: 80px;
+    display: block;
+    width: 30%;
+	text-align: center;
+	border: none;
+    text-decoration: none;  
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #fff;
+}
+
+.coupon button.button{
+	margin-top: 10px;
 }
 
 button:hover,
@@ -682,6 +690,20 @@ textarea {
 .banner__wrap {
     display: flex;
 	justify-content: center;
+}
+
+/* -- Widget Link -- */
+
+a.start__btn {
+    padding: 20px 15px;
+    background: #EEAA00;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+a.start__btn:hover{
+	color:#fff;
+	background: #EEAA00;
 }
 
 /* -- Banner__boxLeft -- */
@@ -1147,7 +1169,7 @@ body::-webkit-scrollbar-thumb {
 .main-navigation {
 	display: block;
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 40px;	
 }
 
 .main-navigation ul {
@@ -1255,10 +1277,10 @@ body::-webkit-scrollbar-thumb {
 	display: block;
 }
 
-.post,
+/* .post,
 .page {
 	margin: 0 0 1.5em;
-}
+} */
 
 .updated:not(.published) {
 	display: none;
@@ -1478,12 +1500,174 @@ body::-webkit-scrollbar-thumb {
 
 header#masthead {
 	display: flex;
+	border-bottom: 1px solid #25356a;
 }
 
 .site-branding > a > img{
 	width: 30%;
 	margin: 0 30px;
 }
+
+
+
+/*--------------------------------------------------------------
+# Widget Section
+--------------------------------------------------------------*/
+
+.widget ul#menu-top-header-menu {
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+}
+
+.widget ul#menu-top-header-menu li{
+    list-style-type: none;
+}
+
+.widget ul#menu-top-header-menu li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# WooCommerce Section
+--------------------------------------------------------------*/
+nav.woocommerce-breadcrumb,
+.product_meta,
+ul.tabs.wc-tabs {
+    display: none;
+}
+.woo__wrapper {
+    display: flex;
+}
+
+button.single_add_to_cart_button.button.alt {
+    margin-top: 10px;
+}
+
+
+
+
+/* -- Footer -- */
+
+footer.site-footer {
+	display: flex;
+	color:#fff;
+	background: #25346B;
+	padding: 50px 0;
+}
+
+.footer__logo {
+	width: 20vw;
+	margin-top: -60px;
+}
+
+footer.site-footer h4 {
+    font-size: 25px;
+}
+
+.contact__links {
+	width: 30vw;
+}
+
+.footer__quickLinks{
+	width: 15vw;
+}
+
+.footer__aboutUs {
+	width: 35vw;
+}
+
+.footer__contact p {
+    margin: 0px;
+}
+
+.site-info {
+    display: none;
+}
+
+
+/* -- Footer Social Media Links -- */
+
+.footer__quickLinks ul{
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+.footer__quickLinks ul li{
+	list-style-type: none;
+	/* background: #fff;*/
+}
+
+.footer__quickLinks ul li a{
+	padding: 10px;
+    font-size: 34px;
+}
+
+.footer__quickLinks ul li a i {
+    color: #EEAA00;    
+}
+}
+.footer__quickLinks ul li a i:hover {
+    color: #3A4779;
+}
+
+
+
+
+.footer__quickLinks ul.quick__links{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__quickLinks ul.quick__links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer__quickLinks ul.quick__links li a:hover{
+    color:#EEAA00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* temp layout styles for interior pages */
+
+.main_wrapper {
+    display: flex;
+}
+
+main#primary{
+    width: 70vw;
+    padding: 100px;
+}
+
+aside#secondary {
+    width: 30vw;
+    background: #25356a;
+    padding: 100px;
+    color: #fff;
+}
+
+aside a {
+	color: #fff;
+}
+aside a:hover {
+	color: #EEAA00;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -1520,59 +1704,15 @@ section.newsletter {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 800;
-    color: #edaa00 !important;
+	color: #edaa00 !important;
 }
 
-
-/* -- Footer -- */
-
-footer.site-footer {
-	display: flex;
-	color:#fff;
-	background: #25346B;
-	padding: 50px 0;
+input.newsletter__submit {
+	background: #EEAA00;
+	color: #fff !important;	
+	width: 100%;
+    margin-top: 0px;
 }
-
-.footer__logo {
-    width: 20vw;
-}
-
-.contact__links {
-	width: 30vw;
-}
-
-.footer__quickLinks{
-	width: 15vw;
-}
-
-.footer__aboutUs {
-	width: 35vw;
-}
-
-
-/* temp layout styles for interior pages */
-
-.main_wrapper {
-    display: flex;
-}
-
-main#primary{
-    width: 70vw;
-    background: #474752;    
-    color: #fff;
-    padding: 100px;
-}
-
-aside#secondary {
-    width: 30vw;
-    background: #25356a;
-    padding: 100px;
-    color: #fff;
-}
-
-
-
-
 
 
 
@@ -1662,7 +1802,19 @@ aside#secondary {
 	aside#secondary {
 		width: 100vw;
 	}
-	
+
+	footer.site-footer{
+		flex-direction: column;
+	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}
  }
 
 
@@ -1752,6 +1904,18 @@ aside#secondary {
 	aside#secondary {
 		width: 100vw;
 	}
+	footer.site-footer{
+		flex-direction: column;
+	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}	
 }
 
 
@@ -1840,7 +2004,19 @@ aside#secondary {
 	}
 	aside#secondary {
 		width: 100vw;
+	}	
+	footer.site-footer{
+		flex-direction: column;
 	}
+	.footer__logo{
+		display: none;
+	}
+	.contact__links,
+	.footer__quickLinks,
+	.footer__aboutUs {
+    	width: 80vw;
+    	padding: 10px 40px;
+	}	
  }
 
 
