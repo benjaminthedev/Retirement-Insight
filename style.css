@@ -1542,12 +1542,29 @@ ul.tabs.wc-tabs {
     display: flex;
 }
 
+
 button.single_add_to_cart_button.button.alt {
     margin-top: 10px;
 }
 
 
 
+
+=======
+.newsletter__wrapper input {
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+	color: #edaa00 !important;
+}
+
+input.newsletter__submit {
+	background: #EEAA00;
+	color: #edaa00 !important;
+}
 
 /* -- Footer -- */
 
@@ -1651,6 +1668,9 @@ footer.site-footer h4 {
 
 main#primary{
     width: 70vw;
+
+    background: #999;    
+    color: #fff;
     padding: 100px;
 }
 
