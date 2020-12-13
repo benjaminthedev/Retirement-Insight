@@ -239,12 +239,31 @@ ul.products li.product .button {
 	color: #e2401c;
 }
 
+input#payment_method_ppec_paypal,
+input#terms {
+    width: 2vw;
+}
+input#rememberme {
+    width: 2vw;
+}
+	.woocommerce-info a{
+		color:#fff !important;
+	}
+li.wc_payment_method.payment_method_ppec_paypal {
+    list-style: none;
+}
+
+a.woocommerce-privacy-policy-link {
+    color: #000;
+}
+
+
 /**
  * Checkout
  */
 @media screen and (min-width: 768px) {
 
-	.col2-set .form-row-first {
+	/* .col2-set .form-row-first {
 		float: left;
 		margin-right: 3.8%;
 	}
@@ -257,7 +276,7 @@ ul.products li.product .button {
 	.col2-set .form-row-first,
 	.col2-set .form-row-last {
 		width: 48.1%;
-	}
+	} */
 }
 
 /**
@@ -452,7 +471,7 @@ p.stars.selected a:not(.active)::before {
 .woocommerce-error, 
 .woocommerce-noreviews, 
 p.no-comments {
-    background-color: #25356a;
+    background-color: #253669;
     clear: both;
     padding: 20px;
     margin-bottom: 30px;
@@ -462,7 +481,7 @@ p.no-comments {
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: #3d9cd2;
+	background-color: #253669;
 }
 
 .woocommerce-error {

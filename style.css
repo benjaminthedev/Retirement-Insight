@@ -420,7 +420,7 @@ h6 {
 	clear: both;
 }
 
-p {
+p, ul, ol {
 	margin-bottom: 1.5em;
 	font-family: 'Playfair Display', serif;
 }
@@ -432,6 +432,12 @@ i {
 	font-style: italic;
 	font-family: 'Playfair Display', serif;
 }
+
+.entry-content li a,
+.entry-content a {
+    color: #000;
+}
+
 
 blockquote {
 	margin: 0 1.5em;
@@ -1542,15 +1548,63 @@ ul.tabs.wc-tabs {
     display: flex;
 }
 
+/* Single Product Page */
+
+.quantity,
+th.product-quantity {
+    display: none;
+}
+
+th.product-name {
+    display: none;
+}
+
+th.product-subtotal {
+    display: none;
+}
+
+th.product-price,
+.woocommerce-additional-fields {
+    display: none;
+}
+
+td.product-subtotal {
+    display: none!important;
+}
+
+input#payment_method_ppec_paypal {
+    display: initial !important;
+}
+
+a.woocommerce-terms-and-conditions-link {
+    color: #000;
+}
+
 
 button.single_add_to_cart_button.button.alt {
     margin-top: 10px;
 }
 
 
+/* Checkout */
+
+.woocommerce-billing-fields__field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.woocommerce-billing-fields__field-wrapper > p {
+    width: 28vw;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 20vw;
+}
 
 
-=======
+
+
 .newsletter__wrapper input {
     margin-bottom: 10px;
     padding: 20px;
@@ -1669,8 +1723,8 @@ footer.site-footer h4 {
 main#primary{
     width: 70vw;
 
-    background: #999;    
-    color: #fff;
+    /* background: #999;     */
+    /* color: #fff; */
     padding: 100px;
 }
 
@@ -1730,7 +1784,7 @@ section.newsletter {
 input.newsletter__submit {
 	background: #EEAA00;
 	color: #fff !important;	
-	width: 100%;
+	width: 78%;
     margin-top: 0px;
 }
 
@@ -1794,6 +1848,7 @@ input.newsletter__submit {
 
 	.section__right{
 		width: 80vw;
+		margin-bottom: 20px;
 	}
 
 	section.three > ul{
@@ -1813,15 +1868,45 @@ input.newsletter__submit {
 	}
 
 	/* -- Interior Page -- */
-	.main_wrapper {
+	.main_wrapper,
+	.woo__wrapper {
     	flex-direction: column;
 	}
-	main#primary {
+	main#primary,
+	.woo__wrapper main#primary {
 		width: 100vw;
+		padding: 70px;
 	}
-	aside#secondary {
+	aside#secondary,
+	.woo__wrapper aside#secondary {
 		width: 100vw;
+		padding: 70px;
 	}
+	button.single_add_to_cart_button.button.alt {
+    	margin-top: 10px;
+    	width: 50vw;	
+	}
+	button, input[type="button"], input[type="reset"], input[type="submit"], a.checkout-button.button.alt.wc-forward{
+		width: 50vw !important;
+		color:#fff;
+	}
+	.woocommerce-billing-fields__field-wrapper{
+		flex-direction: column;
+	}
+	.woocommerce-checkout input{
+		width: 68vw
+	}
+
+
+	aside#secondary .widget .menu-top-header-menu-container{
+		justify-content: flex-start;
+	}
+	aside#secondary .widget ul#menu-top-header-menu {
+  	    margin: 0;
+		padding: 0;
+		width: 50vw;
+	}
+
 
 	footer.site-footer{
 		flex-direction: column;
@@ -1835,6 +1920,13 @@ input.newsletter__submit {
     	width: 80vw;
     	padding: 10px 40px;
 	}
+	/* News Letter Section */
+
+	input,
+	input.newsletter__submit {
+    	width: 88vw;
+	}
+
  }
 
 
@@ -1936,10 +2028,39 @@ input.newsletter__submit {
     	width: 80vw;
     	padding: 10px 40px;
 	}	
+
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  a.section__button {
+			margin-bottom: 30px;
+		}
+		.newsletter__wrapper input {
+			width: 80vw;
+		}
+		aside#secondary{
+			padding: 10px;
+		}
 }
 
 
+
 @media (min-width: 768px) and (max-width: 991.98px) { 
+
+aside#secondary {
+    width: 30vw;
+    background: #25356a;
+    padding: 30px;
+    color: #fff;
+}
+
 	.site-branding > a > img {
 		width: 45%;
 		margin: 0 auto;
