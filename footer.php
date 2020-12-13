@@ -60,7 +60,6 @@
 
 				<ul class="quick__links">
 					<li><a href="/about-us/">About Us</a></li>
-					<li><a href="/how-we-can-help/">How We Can Help</a></li>
 					<li><a href="/how-to-get-started/">How To Get Started</a></li>
 					<li><a href="/plans/">Plans</a></li>
 					<li><a href="/example-reports/">Example Reports</a></li>
