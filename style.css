@@ -1337,6 +1337,8 @@ body::-webkit-scrollbar-thumb {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Captions
@@ -1630,10 +1632,10 @@ footer.site-footer {
 }
 
 .footer__logo {
-	width: 20vw;
-	margin-top: -60px;
+    width: 20vw;
+    margin-top: 73px;
+    padding: 30px;
 }
-
 footer.site-footer h4 {
     font-size: 25px;
 }
